@@ -1,0 +1,337 @@
+:root {
+    --primary: #b87d68;      /* Terracota / Rosé sofisticado */
+    --primary-dark: #96614e;
+    --bg-light: #faf7f5;     /* Creme suave */
+    --text-dark: #2c2827;
+    --text-muted: #6b6360;
+    --white: #ffffff;
+    --whatsapp: #25d366;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: var(--white);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+  
+  .logo span {
+    color: var(--primary);
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .btn-nav {
+    background: var(--primary);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  .btn-nav:hover {
+    background: var(--primary-dark);
+  }
+  
+  /* Hero */
+  .hero {
+    background: linear-gradient(rgba(44, 40, 39, 0.55), rgba(44, 40, 39, 0.55)),
+                url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=80') center/cover;
+    color: var(--white);
+    padding: 120px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 750px;
+  }
+  
+  .badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: var(--white);
+  }
+  
+  .btn-primary:hover {
+    background: var(--primary-dark);
+  }
+  
+  .btn-secondary {
+    background: var(--white);
+    color: var(--text-dark);
+  }
+  
+  /* Seções Gerais */
+  .section {
+    padding: 80px 0;
+  }
+  
+  .bg-light {
+    background: var(--bg-light);
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 48px;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  
+  .card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  }
+  
+  .card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+  }
+  
+  /* Portfólio */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 280px;
+  }
+  
+  .portfolio-item.hide {
+    display: none;
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  
+  .portfolio-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+    color: var(--white);
+    padding: 20px;
+    font-weight: 500;
+  }
+  
+  /* Formulário */
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: center;
+  }
+  
+  .form-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  
+  .info-list {
+    margin-top: 24px;
+    list-style: none;
+  }
+  
+  .info-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .info-list li::before {
+    content: "✓";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  .quote-form {
+    background: var(--white);
+    padding: 36px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
+  
+  .btn-whatsapp {
+    width: 100%;
+    background: var(--whatsapp);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn-whatsapp:hover {
+    filter: brightness(0.95);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 24px;
+    background: var(--text-dark);
+    color: var(--white);
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.1rem; }
+    .form-wrapper, .form-row { grid-template-columns: 1fr; }
+    nav a:not(.btn-nav) { display: none; }
+  }

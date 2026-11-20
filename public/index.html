@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ateliê & Festas | Decoração Personalizada</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">Ateliê <span>& Festas</span></a>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#orcamento" class="btn-nav">Pedir Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="badge">Decoração Exclusiva & Pegue e Monte</span>
+      <h1>Transformamos o seu sonho em uma celebração inesquecível</h1>
+      <p>Projetos personalizados com painéis sublimados, arcos orgânicos, mobiliário completo e atenção em cada detalhe.</p>
+      <div class="hero-buttons">
+        <a href="#orcamento" class="btn-primary">Solicitar Orçamento</a>
+        <a href="#portfolio" class="btn-secondary">Ver Decorações</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Nossos Formatos de Atendimento</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Decoração Completa</h3>
+          <p>Levamos, montamos e desmontamos toda a estrutura no local do seu evento. Você só precisa aproveitar a festa.</p>
+        </div>
+        <div class="card">
+          <h3>Mini Table & Intimista</h3>
+          <p>Ideal para comemorações em casa, apartamentos ou salões menores, mantendo o charme e a sofisticação.</p>
+        </div>
+        <div class="card">
+          <h3>Pegue e Monte</h3>
+          <p>Kits práticos com peças selecionadas, suportes e painéis fáceis de transportar para você mesmo montar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio com Filtro -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 class="section-title">Decorações Realizadas</h2>
+      
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="infantil">Infantil</button>
+        <button class="filter-btn" data-filter="adulto">Adulto & 15 Anos</button>
+        <button class="filter-btn" data-filter="casamento">Casamento & Noivado</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Substitua os src pelas fotos reais na pasta assets/ -->
+        <div class="portfolio-item" data-category="infantil">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80" alt="Festa Infantil" loading="lazy">
+          <div class="overlay"><span>Tema Bosque Encantado</span></div>
+        </div>
+        <div class="portfolio-item" data-category="casamento">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Mini Wedding" loading="lazy">
+          <div class="overlay"><span>Mini Wedding Clássico</span></div>
+        </div>
+        <div class="portfolio-item" data-category="adulto">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Festa Adulto" loading="lazy">
+          <div class="overlay"><span>Aniversário 30 Anos</span></div>
+        </div>
+        <div class="portfolio-item" data-category="infantil">
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Chá Revelação" loading="lazy">
+          <div class="overlay"><span>Chá Revelação Neutro</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Orçamento -> WhatsApp -->
+  <section id="orcamento" class="section bg-light">
+    <div class="container form-wrapper">
+      <div class="form-info">
+        <h2>Peça seu orçamento rápido</h2>
+        <p>Preencha os dados ao lado e você será redirecionado direto para o nosso WhatsApp com as informações prontas.</p>
+        <ul class="info-list">
+          <li>Atendimento em Guararema, Mogi das Cruzes e região</li>
+          <li>Verificação imediata de disponibilidade de data</li>
+          <li>Orçamento sem compromisso</li>
+        </ul>
+      </div>
+
+      <form id="whatsappForm" class="quote-form">
+        <div class="form-group">
+          <label for="nome">Seu Nome</label>
+          <input type="text" id="nome" placeholder="Ex: Maria Silva" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tipoFesta">Tipo de Evento</label>
+            <select id="tipoFesta" required>
+              <option value="Aniversário Infantil">Aniversário Infantil</option>
+              <option value="Aniversário Adulto / 15 Anos">Aniversário Adulto / 15 Anos</option>
+              <option value="Chá de Bebê / Revelação">Chá de Bebê / Revelação</option>
+              <option value="Casamento / Noivado">Casamento / Noivado</option>
+              <option value="Pegue e Monte">Kit Pegue e Monte</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dataEvento">Data Prevista</label>
+            <input type="date" id="dataEvento" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tema">Tema ou Cores Desejadas</label>
+          <input type="text" id="tema" placeholder="Ex: Jardim Encantado, Dourado e Branco..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade / Bairro do Evento</label>
+          <input type="text" id="cidade" placeholder="Ex: Guararema - Centro" required>
+        </div>
+
+        <button type="submit" class="btn-whatsapp">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ateliê & Festas. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
